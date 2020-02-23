@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>Capstone Project</title>
+</head>
+<body>
+
+	<div class="parent">
+		<section class="filter">
+			<div class="input-filter">
+				<input type="input" name="search" placeholder="Search" class="input-value" />
+				<div class="algorithm-section">
+					<input type="radio" name="algorithm" value="linear" checked="checked">
+					<label for="linear">Linear Search</label>
+					<input type="radio" name="algorithm" value="binary">
+					<label for="binary">Binary Search	</label>
+					<input type="radio" name="algorithm" value="selection">
+					<label for="other">Selection Sort</label>
+					<input type="radio" name="algorithm" value="bubble">
+					<label for="other">Bubble Sort</label>
+					<input type="button" value="Submit" class="button">
+					<input type="input" name="arraysize" placeholder="Array Size. Ex 10" class="array-size"/>
+				</div>
+				<div>
+					<label class="not-found"></label>
+				</div>
+				<div>
+					<label class="result"></label>
+				</div>
+			</div>
+			<div class="output">
+				<ul class="list"></ul>
+			</div>
+		</section>
+		<section class="content"></section>
+	</div>
+
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
