@@ -1,0 +1,71 @@
+.parent {
+	width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.algorithm-section {
+	display: inline-block;
+}
+.button {
+  	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	border-radius: 8px;
+}
+label {
+	margin-right: 15px;
+}
+
+ul.list {
+	list-style: none;
+}
+
+ul.list li {
+	display: inline-block;
+    padding: 3px;
+    font-size: 1em;
+    margin: 5px;
+}
+
+ul.list li.blue {
+	border: 3px solid blue;
+}
+
+ul.list li.green {
+	border: 3px solid #029602;
+}
+
+.area {
+    background-color: #389c38;
+}
+.array-size,
+.input-value {
+	height: 1.5em;
+    font-size: 15px;
+    border: 1px solid #f03232;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+
+.not-found {
+	color: red;
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
