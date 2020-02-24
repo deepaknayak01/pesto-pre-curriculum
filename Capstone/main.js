@@ -7,6 +7,7 @@
 	var result;
 	var parentList = document.querySelector('ul');
 	let arraySizeEl = document.querySelector('input[name=arraysize]');
+	let animationSpeed = 500;
 
 	generateTree();
 
@@ -20,6 +21,7 @@
 
 	button.addEventListener("click", () => {
 		document.querySelector('.not-found').innerHTML = '';
+		animationSpeed = parseInt(document.querySelector('.slider').value);
 
 		selectedAlgorithm = document.querySelector('input[name=algorithm]:checked').value;
 		search = parseInt(document.querySelector('input[name=search]').value);
@@ -74,7 +76,7 @@
 	            tree[min] = tmp;
 	            setTimeout(function(){
 	            	swapElements(document.querySelectorAll('li')[i], document.querySelectorAll('li')[min]);
-	            }, i* 1000)
+	            }, i* animationSpeed)
 	       
 	        }
 	    }
@@ -83,7 +85,6 @@
 
 	function bubbleSort() {
 		let len = tree.length;
-		//let parentNode = document.querySelectorAll('ul.list')[0];
 
 	    for (let i = 0; i < len; i++) {
 	        for (let j = 0; j < len; j++) {
@@ -93,7 +94,7 @@
 		                tree[j + 1] = tmp;
 	                setTimeout(function(){
 		            	swapElements(document.querySelectorAll('li')[j], document.querySelectorAll('li')[j+1]);
-		            }, i* 1000)
+		            }, i* animationSpeed)
 	            }
 	        }
 	    }
@@ -127,7 +128,7 @@
 			let timer = setInterval(function(){
 				let timePassed = Date.now() - start;
 
-				if(timePassed >= 500) {
+				if(timePassed >= animationSpeed) {
 					clearInterval(timer);
 
 					if (tree[midIndex] == searchParam) {
@@ -142,7 +143,7 @@
 				    	binarySearchByParam(lowIndex, highIndex, searchParam);
 				    }
 				}
-			}, 500)
+			}, animationSpeed)
 		} else {
 			showResult(-1);
 		}
@@ -164,7 +165,7 @@
 			let timer = setInterval(function(){
 				let timePassed = Date.now() - start;
 
-				if(timePassed >= 500) {
+				if(timePassed >= animationSpeed) {
 					clearInterval(timer);
 					if(tree[index] == searchParam) {
 						document.querySelectorAll('li')[index].classList.add("green");
@@ -178,7 +179,7 @@
 						linearSearchByParam(index, searchParam);
 					}
 				}
-			}, 500)
+			}, animationSpeed)
 		} else {
 			showResult(-1);
 		}
